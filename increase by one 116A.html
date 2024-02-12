@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase by one</title>
+    <style>
+        div.header{
+            text-align: center;
+            font-size: 200%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Increase by one</h1>
+    <div style="display:flex;" id="increase1">
+        <h2 id="increase1">1</h2>
+</body>
+
+<script>
+    show1();
+    function show1() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>1</h1>
+        <button onclick="show2()">Increase by one</button>
+        <button onclick="show2()">Double</button>
+        `;
+    }
+    function show2() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>2</h1>
+        <button onclick="show3()">Increase by one</button>
+        <button onclick="show4()">Double</button>
+        `;
+    }
+    function show3() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>3</h1>
+        <button onclick="show4()">Increase by one</button>
+        <button onclick="show6()">Double</button>
+        `;
+    }
+    function show4() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>4</h1>
+        <button onclick="show5()">Increase by one</button>
+        <button onclick="show8()">Double</button>
+        `;
+    }
+    function show5() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>5</h1>
+        <button onclick="show6()">Increase by one</button>
+        <button onclick="show16()">Double</button>
+        `;
+    }
+    function show6() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>6</h1>
+        <button onclick="show7()">Increase by one</button>
+        <button onclick="show32()">Double</button>
+        `;
+    }
+    function show7() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>7</h1>
+        <button onclick="show8()">Increase by one</button>
+        <button onclick="show64()">Double</button>
+        `;
+    }
+    function show8() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>8</h1>
+        <button onclick="show9()">Increase by one</button>
+        <button onclick="show128()">Double</button>
+        `;
+    }
+    function show9() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>9</h1>
+        <button onclick="show10()">Increase by one</button>
+        <button onclick="show256()">Double</button>
+        `;
+    }
+    function show10() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>10</h1>
+        <button onclick="show11()">Increase by one</button>
+        <button onclick="show512()">Double</button>
+        `;
+    }
+    function show11() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>11</h1>
+        <button onclick="show12()">Increase by one</button>
+        <button onclick="show1024()">Double</button>
+        `;
+    }
+    function show12() {
+        document.getElementById('increase1').innerHTML = /*HTML*/`
+        <h1>12</h1>
+        <button onclick="show13()">Increase by one</button>
+        <button onclick="show2048()">Double</button>
+        `;
+    }
+</script>
+
+</html>

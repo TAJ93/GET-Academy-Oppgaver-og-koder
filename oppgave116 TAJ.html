@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .part {
+            background-color: lightgray;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="layout1()">Layout 1</button>
+    <div id="container">
+        <div class="part">
+            Lav og smal div.
+        </div>
+        <div class="part">
+            Lav og bred div. Lav og bred div. Lav og bred div. Lav og bred div.
+        </div>
+        <div class="part">
+            Høy<br />
+            og<br />
+            smal<br />
+            div<br />
+        </div>
+        <div class="part">
+            Høy og bred div. Høy og bred div. Høy og bred div. Høy og bred div.<br/>
+            Høy og bred div. Høy og bred div. Høy og bred div. Høy og bred div.<br/>
+            Høy og bred div. Høy og bred div. Høy og bred div. Høy og bred div.<br/>
+            Høy og bred div. Høy og bred div. Høy og bred div. Høy og bred div.<br/>
+        </div>
+    </div>
+    <script>
+        function layout1(){
+            document.getElementById('container').style.backgroundColor = 'red';
+        }
+    </script>
+</body>
+</html>
