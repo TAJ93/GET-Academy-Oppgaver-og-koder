@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 116C TAJ</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        out();
+        function out(){
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <h1>You are outside an apartment</h1>
+            <button onclick="hallway()">Enter the apartment</button>
+            `;
+        }
+        function hallway(){
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <h1>You are in the hallway</h1>
+            <button onclick="livingroom()">Enter the livingroom</button>
+            <br>
+            <button onclick="bathroom()">Enter the bathroom</button>
+            <br>
+            <button onclick="out()">Leave the apartment</button>
+            `;
+        }
+        function livingroom(){
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <h1>You are in the livingroom</h1>
+            <button onclick="hallway()">Go out into the hallway</button>
+            <br>
+            <button onclick="bedroom()">Enter the bedroom</button>
+            <br>
+            <button onclick="kitchen()">Enter the kitchen</button>
+            `;
+        }
+        function bathroom(){
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <h1>You are in the bathroom</h1>
+            <button onclick="hallway()">Go out into the hallway</button>
+            `;
+        }
+        function kitchen(){
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <h1>You are in the kitchen</h1>
+            <button onclick="livingroom()">Go into the livingroom</button>
+            `;
+        }    
+        function bedroom(){
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <h1>You are in the bedroom</h1>
+            <button onclick="livingroom()">Go into the livingroom</button>
+            `;
+        }
+    </script>
+    
+</body>
+</html>

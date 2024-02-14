@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 121A TAJ</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td,th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        th {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="myTable">
+    </table>  
+        <button onclick="addrow()">add row</button>  
+
+    <script>
+        // document.getElementById('myTable').innerHTML += /*HTML*/`
+        //     <tr>
+        //         <th>Dag</th>
+        //         <th>Time</th>
+        //         <th>Minutt</th>
+        //         <th>Temperatur</th>
+        //     </tr>
+        //     <tr>
+        //         <td>1</td>
+        //         <td>10</td>
+        //         <td>0</td>
+        //         <td>5</td>
+        //     </tr>
+        //     <tr>
+        //         <td>1</td>
+        //         <td>10</td>
+        //         <td>15</td>
+        //         <td>6</td>
+        //     </tr>
+        //     <tr>
+        //         <td>1</td>
+        //         <td>10</td>
+        //         <td>30</td>
+        //         <td>7</td>
+        //     </tr>
+        // `;
+        addrow('Dag','Time','Minutt','Temperatur', 'th');
+        addrow(1,10,0,5);
+        addrow(1,10,15,6);
+        addrow(1,10,30,7);
+
+        function addrow(value1, value2, value3, value4, tagName) {
+            if (tagName == undefined) {
+                tagName = 'td';
+            }
+            document.getElementById('myTable').innerHTML += /*HTML*/`
+                <tr>
+                    <${tagName}>${value1}</${tagName}>
+                    <${tagName}>${value2}</${tagName}>
+                    <${tagName}>${value3}</${tagName}>
+                    <${tagName}>${value4}</${tagName}>
+                </tr>
+            `;
+
+            
+        }
+
+        function addrowB(value1, value2, value3, value4, tagName) {
+            if (tagName == undefined) {
+                tagName = 'td';
+            }
+            document.getElementById('myTable').innerHTML += /*HTML*/`
+                <tr>
+                    <${tagName}>${value1}</${tagName}>
+                    <${tagName}>${value2}</${tagName}>
+                    <${tagName}>${value3}</${tagName}>
+                    <${tagName}>${value4}</${tagName}>
+                </tr>
+            `;
+        }
+
+        function createTableCell(tagName, value) {
+            return /*HTML*/` <${tagName}>${value}</${tagName}>`;
+        }
+    </script>   
+</body>
+</html>
