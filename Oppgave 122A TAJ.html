@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 122A TAJ</title>
+    <style> 
+        #board {
+            display: grid;
+            grid-template-columns: repeat(8, 100px);
+            grid-template-rows: repeat(8, 100px);
+        }
+
+        #board>div {
+            border: 1px solid lightblue;
+        } 
+
+        .selected {
+            background-color: yellow;
+        }
+    </style>
+</head>
+    <body>
+        <div id="board">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="selected"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        
+
+        <script>
+            let selectedSquareIndex = 7;
+            const size = 64;
+
+            showBoard();
+
+            function showBoard() {
+            // del 1: alle rutene som ikke er valgt før den valgte ruten
+            const lenghtPart1 = selectedSquareIndex;
+            const pattern = '<div></div>';
+            const part1 = ''.padEnd(pattern.length * lenghtPart1, pattern)
+            
+            // del 2: den valgte ruten    
+            const part2 = '<div class="selected"></div>';
+
+            // del 3: alle rutene some ikke er valgt etter den valgte ruten
+            const lengthPart3 = size - (selectedSquareIndex + 1);
+            const part3 = ''.padEnd(pattern.length * lengthPart3, pattern)
+            document.getElementById('board').innerHTML = part1 + part2 + part3;
+            }
+
+            
+
+        </script>
+                    <button>🟦</button>
+                    <button onclick="showBoard(selectedSquareIndex -= 8)">🔼</button>
+                    <button>🟦</button><br>
+                    <button onclick="showBoard(selectedSquareIndex --)">◀️</button>
+                    <button>⏺️</button>
+                    <button onclick="showBoard(selectedSquareIndex ++)">▶️</button><br>
+                    <button>🟦</button>
+                    <button onclick="showBoard(selectedSquareIndex += 8)">🔽</button>
+                    <button>🟦</button>
+    </body>
+</html>
