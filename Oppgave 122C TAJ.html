@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oppgave 122C TAJ</title>
+    </head>
+        <body>
+            <div id="app">
+                Det var en gang en mann.
+            </div>
+
+            <button onclick="changeFontSize(50)">Big!</button>
+            <button onclick="changeFontSize(10)">Small!</button>
+
+            <script>
+                var currentFontSize = 25;
+                
+                function changeFontSize(fontSize) {
+                    currentFontSize = fontSize;
+                    document.getElementById('app').style.fontSize = currentFontSize + "pt";
+                }
+            </script>
+        </body>
+</html>
